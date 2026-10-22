@@ -14,18 +14,17 @@ Classic Klondike solitaire: draw one or three, undo a move and bring all four su
 
 ## Screenshots
 
-| | |
-|:--:|:--:|
-| ![Classic Solitaire board at the start of a Klondike deal, with stock, waste, seven tableau columns and four empty foundations.](docs/media/01.webp) | ![Board after drawing from the stock, with the 2 of spades showing in the waste pile and the move counter at 2.](docs/media/02.webp) |
-| <sub>Classic Solitaire board at the start of a Klondike deal, with stock, waste, seven tableau columns and four empty foundations.</sub> | <sub>Board after drawing from the stock, with the 2 of spades showing in the waste pile and the move counter at 2.</sub> |
-| ![Hint highlighting the 3 of diamonds and the 4 of clubs, with the status line about moving the 3 of diamonds.](docs/media/03.webp) | ![Board with a 9 of spades selected and outlined in gold, with the hint line about building foundations from Ace to King.](docs/media/04.webp) |
-| <sub>Hint highlighting the 3 of diamonds and the 4 of clubs, with the status line about moving the 3 of diamonds.</sub> | <sub>Board with a 9 of spades selected and outlined in gold, with the hint line about building foundations from Ace to King.</sub> |
+![The redesigned Classic Solitaire table: ivory cards, muted slate backs and four empty foundations on forest-green felt. Actual desktop gameplay.](docs/media/redesign-table-desktop.webp)
+
+![Hint outlines the Ace of clubs and its foundation after a stock draw, while the waste pile and move counter remain visible. Actual desktop gameplay.](docs/media/redesign-hint-desktop.webp)
+
+![The mobile table after moving the Ace of clubs to its foundation, leaving the first tableau column empty. Actual phone-size gameplay.](docs/media/redesign-foundation-phone.webp)
 
 ### Video
 
-[![Classic Solitaire board at the start of a Klondike deal, with stock, waste, seven tableau columns and four empty foundations.](docs/media/poster.webp)](docs/media/clip.mp4)
+[![Actual Classic Solitaire gameplay recording.](docs/media/redesign-gameplay-poster.webp)](docs/media/redesign-gameplay.mp4)
 
-*Click the poster to open the short screen recording (docs/media/clip.mp4).*
+*Silent browser recording: draw, Hint, a legal foundation move, Undo, draw-three mode and the rules dialog.*
 
 ## How to play
 
@@ -42,9 +41,7 @@ Classic Klondike solitaire: draw one or three, undo a move and bring all four su
 
 ### Quick start
 
-![Board with a 9 of spades selected and outlined in gold, with the hint line about building foundations from Ace to King.](docs/media/04.webp)
-
-<sub>Board with a 9 of spades selected and outlined in gold, with the hint line about building foundations from Ace to King.</sub>
+![The redesigned table at the start of a saved deal.](docs/media/redesign-table-desktop.webp)
 
 ## Features
 
