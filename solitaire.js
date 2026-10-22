@@ -1,6 +1,7 @@
+import {iconMarkup} from './interface-icons.mjs';
 import {SUITS,red,clone,name,newGame,validState,cardsAt,canMove,move,draw,hint,canFinish,finish} from './rules.js';
 const KEY='casey.top-secret.solitaire.v1';
-const symbols={clubs:'♣',diamonds:'♦',hearts:'♥',spades:'♠'};
+const symbols={clubs:iconMarkup('game-club'),diamonds:iconMarkup('game-diamond'),hearts:iconMarkup('game-heart'),spades:iconMarkup('game-spade')};
 const $=id=>document.getElementById(id);
 let state=newGame(),history=[],selected=null,hinted=null,elapsed=0,clockBase=Date.now(),saveOK=true,resumed=false;
 try{const saved=JSON.parse(localStorage.getItem(KEY));if(saved&&validState(saved.state)){state=saved.state;history=Array.isArray(saved.history)?saved.history.filter(x=>validState(x.state)).slice(-120):[];elapsed=Math.max(0,Number(saved.elapsed)||0);resumed=true;}}catch{}
@@ -20,7 +21,7 @@ function cardHTML(card,from,top=0,offset=0){
 function render(){
  const focused=document.activeElement?.dataset?.key;
  const stockLabel=state.stock.length?`Draw ${state.drawCount} card${state.drawCount===3?'s':''}; ${state.stock.length} remain`:state.waste.length?'Recycle the waste into the stock':'Stock empty';
- let top=`<div class="pile"><button id="stock" class="slot stock ${state.stock.length?'back':''}" data-key="stock" aria-label="${stockLabel}" ${state.won||!state.stock.length&&!state.waste.length?'disabled':''}><span aria-hidden="true">${state.stock.length?'✦':'↻'}</span><span class="stock-count">${state.stock.length||'Recycle'}</span></button><span class="pile-label">STOCK</span></div><div class="pile"><div class="slot" aria-hidden="true"></div>`;
+ let top=`<div class="pile"><button id="stock" class="slot stock ${state.stock.length?'back':''}" data-key="stock" aria-label="${stockLabel}" ${state.won||!state.stock.length&&!state.waste.length?'disabled':''}><span aria-hidden="true">${iconMarkup(state.stock.length?'cards':'refresh')}</span><span class="stock-count">${state.stock.length||'Recycle'}</span></button><span class="pile-label">STOCK</span></div><div class="pile"><div class="slot" aria-hidden="true"></div>`;
  if(state.waste.length)top+=cardHTML(state.waste.at(-1),{pile:'waste'});
  top+=`<span class="pile-label">WASTE · ${state.waste.length}</span></div><div aria-hidden="true"></div>`;
  top+=state.foundations.map((pile,index)=>`<div class="pile ${hinted?.pile==='foundation'&&hinted.index===index?'is-target':''}" data-dest="foundation" data-index="${index}"><button class="slot" data-dest="foundation" data-index="${index}" data-key="foundation-slot-${index}" aria-label="${SUITS[index]} foundation${selected?', move selected card here':''}"><span aria-hidden="true">${symbols[SUITS[index]]}</span></button>${pile.length?cardHTML(pile.at(-1),{pile:'foundation',index}):''}</div>`).join('');
