@@ -1,0 +1,35 @@
+/* Classic Solitaire: broad wood planes, forest felt, ivory faces and slate backs.
+   Presentation only. Card sizes, pile spacing and the existing title scale stay unchanged. */
+:root{background:#493629;color:#f5ebd5}
+body{background:linear-gradient(112deg,#563c2b 0 19%,#493629 19% 77%,#3e3028 77%);color:#f5ebd5}
+.masthead .eyebrow{color:#dfc4a1}
+h1 span{color:#dfd2b9}
+button{background:#32513e;color:#f8edd7;border-color:#bca47b;border-radius:3px}
+button:hover:not(:disabled){background:#40634a}
+button:focus-visible,select:focus-visible{outline-color:#ffe3a6;outline-width:3px;outline-offset:3px}
+.masthead button,.toolbar button{min-height:44px;min-width:44px}
+.quiet{background:#48372b;color:#f8edd7}
+.game-stats{color:#eadcc4}
+.table{background:linear-gradient(147deg,#28513b 0 51%,#234a37 51% 81%,#294e39 81%);border-top-color:#9c7049;box-shadow:inset 0 0 0 8px #765034,0 6px 0 #352a23;border-radius:3px}
+.slot{background:#1c402f;border-color:#b0bf9b;color:#e2dec4;border-radius:4px}
+.card{background:#f5ead0;border-color:#d3bf97;color:#2c302e;border-radius:4px;box-shadow:0 3px 0 #c3b18d,0 5px 5px #13291f66}
+.card.red{color:#a33b2f}
+.card:hover:not(:disabled){background:#fff4d9}
+.card.is-selected{outline-color:#f1c47a;box-shadow:inset 0 0 0 2px #78552e,0 3px 0 #c3b18d,0 5px 5px #13291f66}
+.card.back,.stock.back,.stock.back:hover:not(:disabled){background:linear-gradient(135deg,#5d737e 0 50%,#596f7a 50%);border-color:#eee2c7;box-shadow:inset 0 0 0 1px #3e5660,0 3px 0 #c3b18d,0 5px 5px #13291f66;color:#fff7e7}
+.stock-count{color:#fff7e7}
+.pile-label{color:#e4ddc7}
+.pile.is-target{outline-color:#ffe3a6}
+#status{color:#f6ecd8}
+.save-note{color:#deccb0}
+dialog{background:#f4ead4;color:#302f27;border:2px solid #87643e;border-radius:5px;box-shadow:0 6px 0 #30271f,0 18px 60px #17251ee0}
+dialog::backdrop{background:#15261fd1;backdrop-filter:blur(2px)}
+dialog .eyebrow{color:#705237}
+dialog button{background:#e7dac0;color:#30382b;border-color:#8c7857;min-height:44px}
+dialog button:hover:not(:disabled){background:#d7c6a6;color:#30382b}
+dialog button.primary{background:#315840;color:#fff7e7;border-color:#315840}
+dialog button.primary:hover:not(:disabled){background:#254632;color:#fff7e7}
+dialog select{background:#fff8e7;color:#30382b;border-color:#8c7857;min-height:44px}
+dialog button:focus-visible,dialog select:focus-visible{outline-color:#754d31}
+.win-mark{color:#a33b2f}
+@media(max-width:600px){.table{box-shadow:inset 0 0 0 6px #765034,0 5px 0 #352a23}.card,.slot{border-radius:3px}}

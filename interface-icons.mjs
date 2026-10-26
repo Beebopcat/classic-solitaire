@@ -1,0 +1,11 @@
+// Original decorative UI artwork; labels and game state remain with the caller.
+const icons={
+  "cards": "<svg class=\"ui-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\" focusable=\"false\"><g stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m5 4 12-2 3 17-12 2Z\" fill=\"var(--icon-fill,#577f6f)\"/><path d=\"M4 8H2l2 14h10v-1\" fill=\"none\"/><path d=\"m12 7 3 4-2 4-3-3Z\" fill=\"var(--icon-accent,#927744)\"/></g></svg>",
+  "refresh": "<svg class=\"ui-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\" focusable=\"false\"><g stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 8a8 8 0 1 0 0 8M20 3v5h-5\" fill=\"none\"/></g></svg>",
+  "game-club": "<svg class=\"ui-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\" focusable=\"false\"><g stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 3c-5 0-5 6-2 7-7-3-10 6-4 8l6-3 6 3c6-2 3-11-4-8 3-1 3-7-2-7Z\" fill=\"var(--icon-fill,#577f6f)\"/><path d=\"m12 14-3 8h6Z\" fill=\"var(--icon-accent,#927744)\"/></g></svg>",
+  "game-diamond": "<svg class=\"ui-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\" focusable=\"false\"><g stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m12 2 8 10-8 10-8-10Z\" fill=\"var(--icon-fill,#577f6f)\"/></g></svg>",
+  "game-heart": "<svg class=\"ui-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\" focusable=\"false\"><g stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 21 3 12V6l4-3 5 4 5-4 4 3v6Z\" fill=\"var(--icon-fill,#577f6f)\"/></g></svg>",
+  "game-spade": "<svg class=\"ui-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\" focusable=\"false\"><g stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 2 3 12v5l4 2 5-3 5 3 4-2v-5Z\" fill=\"var(--icon-fill,#577f6f)\"/><path d=\"m12 14-3 8h6Z\" fill=\"var(--icon-accent,#927744)\"/></g></svg>"
+};
+export const iconMarkup = id => icons[id] || "";
+export function iconElement(id){const t=document.createElement("template");t.innerHTML=iconMarkup(id);return t.content.firstElementChild;}
